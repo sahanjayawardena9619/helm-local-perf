@@ -68,10 +68,10 @@ spec:
           requests:
             cpu: 100m
             memory: 150Mi
-        volumes:
-        - name: kube-state-metrics
-          persistentVolumeClaim:
-            claimName: kube-state-metrics-pv-claim
+      volumes:
+      - name: kube-state-metrics
+        persistentVolumeClaim:
+          claimName: kube-state-metrics-pv-claim
       nodeSelector:
         kubernetes.io/os: linux
       securityContext:
