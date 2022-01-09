@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: jenkins-ingress
+  name: prometheus-ingress
   namespace: monitoring
   annotations:
     kubernetes.io/ingress.allow-http: "false"
