@@ -3,7 +3,7 @@ entries:
   1-jenkins:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-01-09T22:51:35.7039154+05:30"
+    created: "2022-01-09T23:15:40.2781598+05:30"
     description: A Helm chart for Kubernetes
     digest: a21442786168d659061e49b6900aa008f3a714ccf7d68fad9ac00114333a63fe
     name: 1-jenkins
@@ -14,7 +14,7 @@ entries:
   2-prometheus-operator:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-01-09T22:51:35.7089487+05:30"
+    created: "2022-01-09T23:15:40.2828497+05:30"
     description: A Helm chart for Kubernetes
     digest: d8b0844421e18348e2e8a1d23d7b126eabd41c7dc60d017cd14d7858b3d2aa12
     name: 2-prometheus-operator
@@ -22,4 +22,15 @@ entries:
     urls:
     - 2-prometheus-operator-0.1.0.tgz
     version: 0.1.0
-generated: "2022-01-09T22:51:35.7019158+05:30"
+  5-prometheus-cluster-monitoring:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-01-09T23:15:40.2842307+05:30"
+    description: A Helm chart for Kubernetes
+    digest: 096531944507c39519356d7e0701bae2a459bf356f8a916a711bba45c0d40191
+    name: 5-prometheus-cluster-monitoring
+    type: application
+    urls:
+    - 5-prometheus-cluster-monitoring-0.1.0.tgz
+    version: 0.1.0
+generated: "2022-01-09T23:15:40.2774641+05:30"

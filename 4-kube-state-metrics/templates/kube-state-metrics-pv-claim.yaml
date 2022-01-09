@@ -1,8 +1,8 @@
----
+# Persistent Volume Claim for Jenkins
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: grafana-pvc
+  name: kube-state-metrics-pv-claim
   namespace: monitoring
   annotations:
     volume.beta.kubernetes.io/storage-class: standard
@@ -11,4 +11,4 @@ spec:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 1Gi
+      storage: 5Gi

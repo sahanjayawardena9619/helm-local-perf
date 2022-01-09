@@ -33,6 +33,10 @@ spec:
           requests:
             cpu: 10m
             memory: 20Mi
+        volumeMounts:
+            - name: kube-state-metrics
+              mountPath: /var/kube_state_metrics
+              
       - args:
         - --logtostderr
         - --secure-listen-address=:9443
@@ -64,6 +68,10 @@ spec:
           requests:
             cpu: 100m
             memory: 150Mi
+        volumes:
+        - name: kube-state-metrics
+          persistentVolumeClaim:
+            claimName: kube-state-metrics-pv-claim
       nodeSelector:
         kubernetes.io/os: linux
       securityContext:
