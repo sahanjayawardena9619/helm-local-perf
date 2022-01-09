@@ -25,6 +25,10 @@ spec:
             limits:
               cpu: "500m"
               memory: "1024Mi"
+          env:
+          - name: JENKINS_OPTS
+            value: --prefix=/jenkins
+
           ports:
             - name: http-port
               containerPort: 8080

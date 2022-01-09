@@ -12,6 +12,10 @@ spec:
       namespace: monitoring
       port: web
   image: bitnami/prometheus:2.30.3
+  args:
+    - --web.enable-lifecycle
+    - --web.route-prefix=/
+    - --web.external-url=https://localhost:9090/prometheus/
   nodeSelector:
     kubernetes.io/os: linux
   podMonitorSelector: {}
