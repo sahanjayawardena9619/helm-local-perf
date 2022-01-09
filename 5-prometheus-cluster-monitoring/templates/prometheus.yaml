@@ -15,7 +15,7 @@ spec:
   args:
     - --web.enable-lifecycle
     - --web.route-prefix=/
-    - --web.external-url=https://localhost/prometheus/
+    - --web.external-url=http://localhost/prometheus
   nodeSelector:
     kubernetes.io/os: linux
   podMonitorSelector: {}
