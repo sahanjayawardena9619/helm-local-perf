@@ -1,0 +1,14 @@
+# Persistent Volume Claim for Jenkins
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: jenkins-pv-claim
+  namespace: perf-platform
+  annotations:
+    volume.beta.kubernetes.io/storage-class: standard
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 5Gi

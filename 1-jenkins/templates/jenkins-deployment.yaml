@@ -1,0 +1,49 @@
+# Deployment for the Jenkins
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jenkins
+  namespace: perf-platform
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jenkins
+  template:
+    metadata:
+      labels:
+        app: jenkins
+    spec:
+      containers:
+        - name: jenkins
+          image: jenkins/jenkins:lts
+          resources:
+            requests:
+              cpu: "500m"
+              memory: "1024Mi"
+            limits:
+              cpu: "500m"
+              memory: "1024Mi"
+          ports:
+            - name: http-port
+              containerPort: 8080
+            - name: jnlp-port
+              containerPort: 50000
+          volumeMounts:
+            - name: jenkins-vol
+              mountPath: /var/jenkins_home
+      volumes:
+        - name: jenkins-vol
+          persistentVolumeClaim:
+            claimName: jenkins-pv-claim
+      initContainers:
+        - name: permissionsfix
+          image: alpine:latest
+          command: ["/bin/sh", "-c"]
+          args:
+            - chown 1000:1000 /var/jenkins_home;
+          volumeMounts:
+            - name: jenkins-vol # Or you can replace with any name
+              mountPath: /var/jenkins_home # Must match the mount path in the args line
+      restartPolicy: Always

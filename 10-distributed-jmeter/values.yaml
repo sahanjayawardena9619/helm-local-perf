@@ -1,0 +1,20 @@
+#JMeter Slave Configuration
+dep:
+  name: distributed-jmeter
+slave:
+  replicaCount: 2
+  image: sjay8691/jmeter-all-plugins-slave
+  tag: 5.4.1-jdk11-extended-logs-v2
+  pullPolicy: IfNotPresent
+  res:
+    req:
+      mem: "1024Mi"
+      cpu: "200m"
+    lim:
+      mem: "1248Mi"
+      cpu: "300m"
+  heap:
+    xms:
+      memory: "512M"
+    xmx:
+      memory: "512M"

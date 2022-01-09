@@ -1,0 +1,53 @@
+apiVersion: monitoring.coreos.com/v1
+kind: Prometheus
+metadata:
+  labels:
+    prometheus: k8s
+  name: k8s
+  namespace: monitoring
+spec:
+  alerting:
+    alertmanagers:
+    - name: alertmanager-main
+      namespace: monitoring
+      port: web
+  image: bitnami/prometheus:2.30.3
+  nodeSelector:
+    kubernetes.io/os: linux
+  podMonitorSelector: {}
+  replicas: 1
+  retention: 1d
+  scrapeInterval: 30s
+  resources:
+    requests:
+      cpu: 200m
+      memory: 512Mi
+    limits:
+      cpu: 500m
+      memory: 512Mi
+  storage:
+    volumeClaimTemplate:
+      spec:
+        # storageClassName: gp2
+        resources:
+          requests:
+            storage: 5Gi
+  ruleSelector:
+    matchLabels:
+      prometheus: k8s
+      role: alert-rules
+  securityContext:
+    fsGroup: 2000
+    runAsNonRoot: true
+    runAsUser: 1000
+  serviceAccountName: prometheus-k8s
+  serviceMonitorSelector:
+    matchExpressions:
+    - key: k8s-app
+      operator: In
+      values:
+      - node-exporter
+      - kube-state-metrics
+      - apiserver
+      - kubelet
+  version: v2.11.0

@@ -1,0 +1,15 @@
+# ClusterIP for the Jenkins-jnlp
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: influxdb-service
+  namespace: monitoring
+spec:
+  type: LoadBalancer
+  ports:
+    - protocol: TCP
+      port: 8086
+      targetPort: 8086
+  selector:
+    app: influxdb   
