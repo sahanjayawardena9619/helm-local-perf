@@ -26,6 +26,9 @@ spec:
           securityContext:
             runAsNonRoot: true
             runAsUser: 65534
+          env:
+            GF_SERVER_ROOT_URL: https://localhost/grafana
+            GF_SERVER_SERVE_FROM_SUB_PATH: 'true'
           ports:
             - name: grafana
               containerPort: 3000
