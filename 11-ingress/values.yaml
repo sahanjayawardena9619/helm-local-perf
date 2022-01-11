@@ -1,9 +1,3 @@
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: grafana-ingress
-  namespace: monitoring
-
 ingress:
   enabled: true
   annotations:
@@ -17,3 +11,7 @@ backend:
     name: grafana
     port:
       number: 3000
+
+grafana.ini:
+  server:
+    root_url: http://localhost/grafana # this host can be localhost
