@@ -1,6 +1,0 @@
-data:
-  grafana.ini: |
-    [server]
-    serve_from_sub_path = true
-    domain = localhost
-    root_url = http://localhost/grafana/
