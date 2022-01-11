@@ -3,7 +3,7 @@ entries:
   1-jenkins:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-01-11T22:11:19.1310049+05:30"
+    created: "2022-01-11T22:39:26.0711615+05:30"
     description: A Helm chart for Kubernetes
     digest: caee984c03209b7ab693ae2048fa3f68661f84b4a8aaddacc1eadb45e915cd42
     name: 1-jenkins
@@ -14,7 +14,7 @@ entries:
   2-prometheus-operator:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-01-11T22:11:19.1382189+05:30"
+    created: "2022-01-11T22:39:26.0871684+05:30"
     description: A Helm chart for Kubernetes
     digest: d8b0844421e18348e2e8a1d23d7b126eabd41c7dc60d017cd14d7858b3d2aa12
     name: 2-prometheus-operator
@@ -25,7 +25,7 @@ entries:
   3-node-exporter:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-01-11T22:11:19.1393414+05:30"
+    created: "2022-01-11T22:39:26.0891639+05:30"
     description: A Helm chart for Kubernetes
     digest: 48c7f0fb7a6f481848fef2803d06daa8f54acb163445be49c893492d9a66461a
     name: 3-node-exporter
@@ -36,7 +36,7 @@ entries:
   4-kube-state-metrics:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-01-11T22:11:19.1404782+05:30"
+    created: "2022-01-11T22:39:26.0911659+05:30"
     description: A Helm chart for Kubernetes
     digest: eb3baa3f5dc82dbc4c450f83e6acfdcf8f58a17bd96d040dad47f25814b1ce0c
     name: 4-kube-state-metrics
@@ -47,7 +47,7 @@ entries:
   5-prometheus-cluster-monitoring:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-01-11T22:11:19.141602+05:30"
+    created: "2022-01-11T22:39:26.0939914+05:30"
     description: A Helm chart for Kubernetes
     digest: 5678debc988ff5cc993d3a2438c0fcf3e22905aaa14466a2c57e0da696558ef5
     name: 5-prometheus-cluster-monitoring
@@ -58,7 +58,7 @@ entries:
   7-grafana:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2022-01-11T22:11:19.1427291+05:30"
+    created: "2022-01-11T22:39:26.0950953+05:30"
     description: A Helm chart for Kubernetes
     digest: d79e0924aec0d93ee2bff9b034f417c442d556da0025edcb4bcdc9a0f2d3b709
     name: 7-grafana
@@ -66,4 +66,15 @@ entries:
     urls:
     - 7-grafana-0.1.0.tgz
     version: 0.1.0
-generated: "2022-01-11T22:11:19.1298804+05:30"
+  11-ingress:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2022-01-11T22:39:26.072161+05:30"
+    description: A Helm chart for Kubernetes
+    digest: 241ca77cee69c28067a643628779bcbb1aa02ad42c0d7fe54750f2c5ad46c9a0
+    name: 11-ingress
+    type: application
+    urls:
+    - 11-ingress-0.1.0.tgz
+    version: 0.1.0
+generated: "2022-01-11T22:39:26.0681644+05:30"
