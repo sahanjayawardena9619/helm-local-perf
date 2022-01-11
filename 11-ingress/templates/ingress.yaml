@@ -15,7 +15,7 @@ apiVersion: extensions/v1beta1
 {{- end }}
 kind: Ingress
 metadata:
-  name: grafana-ingress
+  name: {{ $fullName }}
   labels:
     {{- include "11-ingress.labels" . | nindent 4 }}
   {{- with .Values.ingress.annotations }}
