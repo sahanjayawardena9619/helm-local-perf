@@ -5,7 +5,7 @@ metadata:
   name: influx-db-pv-claim
   namespace: monitoring
   annotations:
-    volume.beta.kubernetes.io/storage-class: managed-premium
+    volume.beta.kubernetes.io/storage-class: standard
 spec:
   accessModes:
     - ReadWriteOnce
